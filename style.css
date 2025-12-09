@@ -1,0 +1,5 @@
+body { font-family: system-ui, Arial; margin: 20px; color:#222; }
+img { max-width:100%; height:auto; border-radius:8px; }
+label { display:block; margin:10px 0; }
+button { padding:8px 12px; border-radius:6px; }
+#message { margin-top:10px; }
