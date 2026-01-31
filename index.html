@@ -15,6 +15,8 @@
                     - Neue Sektion 3 eingefügt, andere Sektionen verschoben
                     - Sektion 3. Anmeldung erstellt und Design angepasst
                     - Regionen für bessere Übersicht in HTML & CSS hinzugefügt
+*** v1.3 - 31.01.26 - Sektion 7. City Bild und Sektion 8. Anreise hinzugefügt
+                    - Countdown Timer Script hinzugefügt
 ***
 ***********************************************************************-->
 
@@ -38,6 +40,16 @@
           <h1>Laura<span class="sonderzeichen">&</span>Patrick</h1>
           <div class="zwischentext">
             heiraten in <span class="special-font">Italien</span>
+          </div>
+
+          <div id="countdown-wrap">
+            <div class="cd-item"><span id="days">00</span><label>Tage</label></div>
+            <div class="cd-divider">:</div>
+            <div class="cd-item"><span id="hours">00</span><label>Std</label></div>
+            <div class="cd-divider">:</div>
+            <div class="cd-item"><span id="minutes">00</span><label>Min</label></div>
+            <div class="cd-divider">:</div>
+            <div class="cd-item"><span id="seconds">00</span><label>Sek</label></div>
           </div>
         </div>
         
@@ -200,8 +212,41 @@
     </div>
     <!-- #endregion -->
 
-  <!-- #region Google Apps Script Form Handling -->
+    <!-- #region SIEBTER BEREICH (Grottammare Bild) -->
+    <div class="image-section-simple">
+    <img src="images/City1.jpeg">
+    </div>
+
+    <!-- #endregion -->
+
+    <!-- #region ACHTER BEREICH (Anreise) -->
+    <div class="travel-section">
+      <div class="travel-container">
+        <div class="trav-title">
+          Anreise
+        </div>
+
+        <div class="trav-intro">
+          <h4>Flugzeug</h4>
+          Flughäfen, die in der Nähe liegen: Ancona, Pescara, Rom<br><br>
+
+          <h4>Von Stuttgart</h4>Gibt es gute Flüge nach Rom<br>+ ca. 2 Stunden Fahrt nach Grottammare<br><br>
+          <h4>Von München</h4>Gibt es gute Flüge nach Ancona<br>+ ca. 45 Minuten Fahrt nach Grottammare<br><br>
+          <h4>Von Memmingen</h4>Gibt es gute Flüge nach Pescara<br>+ ca. 45 Minuten Fahrt nach Grottammare<br><br>
+          <h4>Mit dem Auto</h4>
+          <span style="white-space: nowrap;">Grottammare ist über die Autobahn A14 gut erreichbar.<br>
+          Natürlich könnt ihr auch Fahrgemeinschaften bilden und mit dem Auto fahren.<br>
+          Wir helfen euch gerne bei der Koordination.
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- #endregion -->
+
+
   <script>
+
+    // #region Google Apps Script Form Handling
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxC_1agKsK-DSe1lCnanC0McyAoxqq1-q--HVikLSn4gqQtXHGIafRwNQwL_PiPjJh9HA/exec';
     const form = document.getElementById('rsvp-form');
     const btn = document.getElementById('submit-btn');
@@ -221,9 +266,51 @@
         })
         .catch(error => console.error('Fehler!', error.message));
     });
+    // #endregion
+
+    // #region Countdown Timer Script 
+    function startCountdown() {
+        // Zieldatum festlegen
+        const weddingDate = new Date("September 19, 2026 15:00:00").getTime();
+
+        // Funktion, die die Zahlen aktualisiert
+        function update() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            // Wenn das Datum erreicht ist
+            if (distance < 0) {
+                document.getElementById("countdown-wrap").innerHTML = "HEUTE IST ES SOWEIT!";
+                return;
+            }
+
+            // Berechnung von Tagen, Stunden, Minuten, Sekunden
+            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // IDs prüfen und Werte schreiben (mit Sicherheitscheck)
+            if(document.getElementById("days")) {
+                document.getElementById("days").innerText = d.toString().padStart(2, '0');
+                document.getElementById("hours").innerText = h.toString().padStart(2, '0');
+                document.getElementById("minutes").innerText = m.toString().padStart(2, '0');
+                document.getElementById("seconds").innerText = s.toString().padStart(2, '0');
+            }
+        }
+
+        // Jede Sekunde aktualisieren
+        setInterval(update, 1000);
+        // Einmal sofort ausführen, damit nicht erst nach 1 Sekunde Zahlen erscheinen
+        update();
+    }
+
+    // Sicherstellen, dass das Skript erst startet, wenn das HTML geladen ist
+    window.addEventListener('DOMContentLoaded', startCountdown);
+    // #endregion
 
   </script>
-  <!-- #endregion -->
+
 
 </body>
 
