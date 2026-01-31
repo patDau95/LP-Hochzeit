@@ -1,94 +1,231 @@
-<!--**************************************************************
-***                                                            ***
-***          Hochzeits-Website für Laura & Patrick             ***
-***                                                            ***
-***         Erstellt von Patrick Daucik am 21.12.25.           ***
-***                                                            ***
-******************************************************************
--->
+<!--**********************************************************************
+***                                                                    ***
+***          Hochzeits-Website für Laura & Patrick                     ***
+***                                                                    ***
+***         Erstellt von Patrick Daucik am 21.12.25                    ***
+***                                                                    ***
+**************************************************************************
+***
+*** Versionshistorie:
+*** v1.0 - 21.12.25 - Grundstruktur und erstes Design in Index.html
+                    - Sektionen 1. Landing Page, 2. Beiger Hintergrund,
+                      3. Oliven Bild & 4. Details erstellt
+*** v1.1 - 04.01.26 - Sektion 5. Unterkunft hinzugefügt
+*** v1.2 - 07.01.26 - style.css hinzugefügt und Grunddesign angepasst
+                    - Neue Sektion 3 eingefügt, andere Sektionen verschoben
+                    - Sektion 3. Anmeldung erstellt und Design angepasst
+                    - Regionen für bessere Übersicht in HTML & CSS hinzugefügt
+***
+***********************************************************************-->
 
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laura & Patrick heiraten!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f9f9f9;
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300&family=Ballet:opsz@16..72&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
 
-        .card {
-            text-align: center;
-            max-width: 600px;
-            width: 90%;
-            padding: 20px;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-            color: #555;
-        }
-
-        .photo-container {
-            width: 100%;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .photo-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-            /* Falls du das Foto leicht sepia oder weicher wirken lassen willst: */
-            /* filter: brightness(0.95); */
-        }
-
-        .footer-text {
-            font-size: 0.9rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-weight: 300;
-            margin-top: 20px;
-            color: #777;
-        }
-
-        hr {
-            width: 50px;
-            border: 0;
-            border-top: 1px solid #ccc;
-            margin: 20px auto;
-        }
-    </style>
 </head>
+
 <body>
 
-    <div class="card">
-        <h1>Laura & Patrick heiraten in Italien</h1>
-        
-        <div class="photo-container">
-            <img src="/Users/patrickdaucik/LP-Hochzeit/images/6C08D15F-35E8-476F-B75F-FDB20194FFB7_1_201_a.jpeg">
+    <!-- #region ERSTER BEREICH (Landing Page) -->
+    <div class="hero-container">
+        <div class="content">
+          <h1>Laura<span class="sonderzeichen">&</span>Patrick</h1>
+          <div class="zwischentext">
+            heiraten in <span class="special-font">Italien</span>
+          </div>
         </div>
-
+        
         <div class="footer-text">
-            GROTTAMMARE, IT &nbsp;|&nbsp; 18. - 21. SEPTEMBER 26
+            GROTTAMMARE, IT &nbsp;|&nbsp; 18. - 21. SEPTEMBER 2026
         </div>
     </div>
+    <!-- #endregion -->
+
+    <!-- #region ZWEITER BEREICH (Beiger Trenner) -->
+    <div class="split-section">
+        <div class="split-text">
+            A dream wedding, far from <span class="special-font"> home</span>
+            <br>but close to the <span class="special-font"> heart.</span>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region DRITTER BEREICH (Anmeldung) -->
+    <div class="registration-section">
+      <div class="registration-container">
+        <div class="reg-title">
+          Anmeldung
+        </div>
+
+        <div class="reg-intro">
+          Wir freuen uns sehr, wenn ihr diesen besonderen Tag mit uns verbringt!
+          <br>
+          Bitte gebt uns bis zum <span class="reg-intro-strong">15. Februar</span> Bescheid, ob ihr dabei sein könnt.
+        </div>
+
+        <form id="rsvp-form" class="rsvp-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Vor- und Nachname</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Name Begleitung</label>
+                    <input type="text" name="begleitung">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Teilnahme</label>
+                    <select name="teilnahme" required>
+                        <option value="ja">Ich / Wir kommen gerne!</option>
+                        <option value="nein">Ich / Wir können leider nicht</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Vegetarische Menüs</label>
+                    <select name="veggie_anzahl">
+                        <option value="0">Keins</option>
+                        <option value="1">1x vegetarisch</option>
+                        <option value="2">2x vegetarisch</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Anreise</label>
+                    <input type="date" name="anreise" 
+                            min="2026-09-01" 
+                            max="2026-09-19" 
+                          value="2026-09-18">
+                </div>
+                <div class="form-group">
+                    <label>Abreise</label>
+                    <input type="date" name="abreise"
+                            min="2026-09-19" 
+                            max="2026-09-30" 
+                          value="2026-09-21">
+                </div>
+            </div>
+
+            <button type="submit" class="submit-button" id="submit-btn">Abschicken</button>
+            <p id="success-msg" style="display:none; margin-top:20px;">Vielen Dank! Deine Anmeldung wurde gespeichert.</p>
+        </form>
+      </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region VIERTER BEREICH (Oliven Bild) -->
+    <div class="image-section-simple">
+    <img src="images/Oliva1.jpeg">
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region FÜNFTER BEREICH (Details) -->
+    <div class="details-section">
+      <div class="details-image">
+        <img src="images/Tisch1.jpeg">
+      </div>
+
+      <div class="details-text">
+        <h2>Unser <br>
+          <span class="h3">Wochenende</span></h2>
+        
+        <div class="absatz">
+            <h4>Freitag 18.09.26</h4>
+            <p>Anreise & gemeinsames Abendessen</p>
+        </div>
+
+        <div class="absatz">
+            <h4>Samstag 19.09.26</h4>
+            <p>Freie Trauung, Hochzeitsdinner & Party</p>
+        </div>
+
+        <div class="absatz">
+            <h4>Sonntag 20.09.26</h4>
+            <p>Gemeinsamer Brunch & Entspannen am Pool oder Strand</p>
+        </div>
+
+        <div class="absatz">
+            <h4>Montag 21.09.26</h4>
+            <p>Abreise</p>
+        </div>
+      </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region SECHSTER BEREICH (Unterkunft) -->
+    <div class="accommodation-section">
+      <div class="acc-left">
+        <h5>Die <br>
+          <span class="acc-title">Unterkunft</span>
+        </h5>
+      </div>
+
+      <div class="acc-right">
+        <div class="acc-content">
+          <p>
+            Damit ihr eure Zeit ganz entspannt mit uns genießen könnt, 
+            werden wir für euch im Hotel Jerry in Grottammare drei Nächte 
+            von Freitag bis Montag reservieren und übernehmen. Hier könnt ihr 
+            euch das Hotel anschauen:
+            
+          <a href="https://www.jerryhotel.com" target="_blank" class="icon-link">
+            <span class="material-symbols-outlined">hotel</span>
+          </a>
+
+            <br><br>
+            Falls ihr gerne früher anreisen oder länger bleiben möchtet, 
+            ist das natürlich jederzeit möglich. Die zusätzlichen Nächte 
+            könnt ihr dann ganz flexibel auf eigene Kosten dazubuchen.<br><br>
+
+            Ein kleiner Hinweis für eure Planung: Es gibt bereits sehr gute 
+            Flugverbindungen ab Donnerstag, falls ihr euch ein paar entspannte 
+            Tage mehr gönnen möchtet. Wir werden von Donnerstag bis Dienstag vor Ort sein.<br><br>
+
+            Uns ist wichtig, dass ihr euch wohlfühlt und eure Reise so gestalten könnt, 
+            wie es für euch am besten passt. Wenn ihr Fragen habt oder Unterstützung 
+            bei der Planung braucht, meldet euch jederzeit gerne bei uns 🤍
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- #endregion -->
+
+  <!-- #region Google Apps Script Form Handling -->
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxC_1agKsK-DSe1lCnanC0McyAoxqq1-q--HVikLSn4gqQtXHGIafRwNQwL_PiPjJh9HA/exec';
+    const form = document.getElementById('rsvp-form');
+    const btn = document.getElementById('submit-btn');
+    const msg = document.getElementById('success-msg');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      btn.disabled = true;
+      btn.innerHTML = "Wird gesendet...";
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.style.display = 'block';
+            form.reset();
+            btn.innerHTML = "Abschicken";
+            btn.disabled = false;
+        })
+        .catch(error => console.error('Fehler!', error.message));
+    });
+
+  </script>
+  <!-- #endregion -->
 
 </body>
+
+
 </html>
