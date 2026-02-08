@@ -554,7 +554,7 @@
     }
 
     /* Tablets (iPad, etc.) */
-    @media (min-width: 769px) and (max-width: 1024px) {
+    @media (max-width: 1024px) {
     /* Grundschutz: Alles bleibt innerhalb des Rahmens */
         html, body {
             width: 100% !important;
@@ -601,10 +601,10 @@
 
         .details-image, .details-text {
             flex: 1;
-            min-width: 0 !important; /* WICHTIG: Überschreibt die 500px vom PC */
-            width: 50% !important;
+            min-width: 0; /* WICHTIG: Überschreibt die 500px vom PC */
+            width: 50%;
         }
-        .details-text .h3 { font-size: 3.5rem; margin-bottom: 10px; }
+        .details-text .h3 { font-size: 3rem; margin-bottom: 10px; }
 
         /* Unterkunft Sektion */
         .accommodation-section {
@@ -613,7 +613,7 @@
             width: 100% !important;
             height: auto !important;
         }
-        .acc-title { font-size: 3.5rem; }
+        .acc-title { font-size: 3rem; }
 
         .acc-left, .acc-right {
             flex: 1;
@@ -643,7 +643,6 @@
             object-fit: cover;
         }
     }
-
 
      /* Mobile Devices (iPhone, Android, etc.) */
     @media (max-width: 768px) {
@@ -710,7 +709,7 @@
 
         /* Anmeldung / Formular */
         .registration-section { padding: 60px 20px; height: auto; }
-        .reg-intro { font-size: 1.1rem; margin-bottom: 40px; }
+        .reg-intro { font-size: 1.1rem; margin-bottom: 40px; hyphens: none; text-align: justify;}
         .reg-title { font-size: 3rem; margin-top: 0; line-height: 1.2; margin-bottom: 30px; }
         .form-row { flex-direction: column; gap: 20px; }
         .rsvp-form { width: 100%; max-width: 100%; }
@@ -719,7 +718,7 @@
 
         /* Details Sektion (Bild & Text Mix) */
         .details-section { height: auto; flex-direction: column; }
-        .details-image { height: 400px; order: 1; } /* Bild oben */
+        .details-image { height: 400px; width: 100%; order: 1; } /* Bild oben */
         .details-text { order: 2; padding: 50px 25px; width: 100%; min-width: 100%; }
         .details-text h2 { font-size: 3rem; margin-bottom: 10px; }
         .h3 { font-size: 2.8rem; margin-top: 0; margin-bottom: 30px; }
