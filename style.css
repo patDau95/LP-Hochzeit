@@ -484,7 +484,7 @@
         }
     /* #endregion */
 
-    /* #region ACHTTER BEREICH (Anreise) */
+    /* #region ACHTER BEREICH (Anreise) */
         .travel-section {
         background-color: #dfd9c9; /* Helles Cremeweiß der vorherigen sektion auf Grün */
         min-height: 80vh;
@@ -534,6 +534,7 @@
         padding: 60px 20px;
         text-align: center;
         width: 100%;
+        height: 20vh;
     }
 
     .footer-content p {
@@ -557,14 +558,14 @@
     @media (max-width: 1024px) {
     /* Grundschutz: Alles bleibt innerhalb des Rahmens */
         html, body {
-            width: 100% !important;
-            overflow-x: hidden !important;
+            width: 100%;
+            overflow-x: hidden;
             margin: 0;
             padding: 0;
         }
 
         * { 
-            box-sizing: border-box !important; 
+            box-sizing: border-box; 
         }
 
         /* Landing Page Hero */
@@ -574,29 +575,29 @@
 
         /* Anmeldung: Hier wird oft abgeschnitten */
         .registration-section {
-            width: 100% !important;
-            padding: 80px 40px !important;
+            width: 100%;
+            padding: 80px 40px;
         }
 
         .registration-container {
-            max-width: 100% !important;
-            width: 100% !important;
+            max-width: 100%;
+            width: 100%;
         }
 
         /* Formular-Fix für iPad: Felder nebeneinander lassen, aber Lücke verkleinern */
         .form-row {
             display: flex;
             flex-direction: row; /* iPad hat genug Platz für nebeneinander */
-            gap: 30px !important;
+            gap: 30px;
             width: 100%;
         }
 
         /* Details Sektion: Verhindert das "Rausdrücken" durch min-width */
         .details-section {
-            height: auto !important;
+            height: auto;
             display: flex;
             flex-direction: row; /* Side-by-Side */
-            width: 100% !important;
+            width: 100%;
         }
 
         .details-image, .details-text {
@@ -610,36 +611,36 @@
         .accommodation-section {
             display: flex;
             flex-direction: row;
-            width: 100% !important;
-            height: auto !important;
+            width: 100%;
+            height: auto;
         }
         .acc-title { font-size: 3rem; }
 
         .acc-left, .acc-right {
             flex: 1;
-            min-width: 0 !important; /* WICHTIG: Verhindert das Abschneiden */
-            padding: 50px 30px !important;
+            min-width: 0; /* WICHTIG: Verhindert das Abschneiden */
+            padding: 50px 30px;
         }
 
         .acc-content {
-            max-width: 100% !important;
+            max-width: 100%;
         }
 
         /* Anreise Sektion */
         .travel-section {
-            width: 100% !important;
-            padding: 80px 40px !important;
+            width: 100%;
+            padding: 80px 40px;
         }
 
         .travel-container {
-            max-width: 100% !important;
+            max-width: 100%;
         }
 
         /* Bilder-Fix */
         .image-section-simple1 img, 
         .image-section-simple2 img {
-            width: 100% !important;
-            height: 450px !important;
+            width: 100%;
+            height: 450px;
             object-fit: cover;
         }
     }
