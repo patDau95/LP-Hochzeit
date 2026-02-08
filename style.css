@@ -645,7 +645,6 @@
         }
     }
     
-
      /* Mobile Devices (iPhone, Android, etc.) */
     @media (max-width: 768px) {
         /* #region 1. Den Body oder Wrapper zum Flex-Container machen */
@@ -720,7 +719,7 @@
 
         /* Details Sektion (Bild & Text Mix) */
         .details-section { height: auto; flex-direction: column; }
-        .details-image { height: 400px; width: 100%; order: 1; } /* Bild oben */
+        .details-image { height: 100%; order: 1; } /* Bild oben */
         .details-text { order: 2; padding: 50px 25px; width: 100%; min-width: 100%; }
         .details-text h2 { font-size: 3rem; margin-bottom: 10px; }
         .h3 { font-size: 2.8rem; margin-top: 0; margin-bottom: 30px; }
