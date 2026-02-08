@@ -653,6 +653,10 @@
             flex-direction: column;
         }
 
+        * { 
+        box-sizing: border-box !important; 
+        }
+
         /* 2. Standard-Reihenfolge definieren (alle Sektionen) */
         .hero-container { order: 1; }
         .split-section { order: 2; }
@@ -718,9 +722,30 @@
         .rsvp-form input, .rsvp-form select { font-size: 1rem; }
 
         /* Details Sektion (Bild & Text Mix) */
-        .details-section { height: auto; flex-direction: column; }
-        .details-image { height: 100%; order: 1; } /* Bild oben */
-        .details-text { order: 2; padding: 50px 25px; width: 100%; min-width: 100%; }
+        .details-section {
+            height: auto; 
+            flex-direction: column; 
+            width: 100% !important;
+            overflow: hidden;
+        }
+        .details-image { 
+            height: 400px !important; 
+            order: 1; 
+            width: 100% !important;
+            min-width: 0 !important;
+        } /* Bild oben */
+        .details-image img { 
+            height: 100%; 
+            width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .details-text { 
+            order: 2;
+            padding: 50px 20px; 
+            width: 100%; 
+            min-width: 0 !important; 
+        }
         .details-text h2 { font-size: 3rem; margin-bottom: 10px; }
         .h3 { font-size: 2.8rem; margin-top: 0; margin-bottom: 30px; }
         .absatz h4 { font-size: 1.4rem; }
