@@ -1,5 +1,5 @@
     /* overflow: hidden entfernt, damit man scrollen kann */
-    body, html { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; background-color: #dfd9c9; }
+    body, html { margin: 0; padding: 0; font-family: 'Playfair Display', serif; background-color: #dfd9c9; }
 
     /* #region ERSTER BEREICH (Landing Page) */
         .hero-container {
@@ -66,6 +66,7 @@
         }
 
         .footer-text {
+            font-family: 'Montserrat', sans-serif;
             position: absolute;
             bottom: 50px;
             width: 100%;
@@ -100,7 +101,7 @@
         }
 
         .cd-item label {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-size: 0.65rem;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -157,7 +158,7 @@
         }
 
         .reg-intro {
-        font-family: 'Montserrat', serif;
+        font-family: 'Playfair Display', serif;
         font-size: 1.5rem;
         margin: 0;
         font-weight: 100;
@@ -198,7 +199,7 @@
         }
 
         .form-group label {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -273,7 +274,7 @@
             border: 1px solid #f1f1e6;
             color: #f1f1e6;
             padding: 15px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Playfair Display', serif;
             text-transform: uppercase;
             letter-spacing: 2px;
             cursor: pointer;
@@ -502,8 +503,8 @@
         width: 100%;
         }
 
-        .trav-intro {
-        font-family: 'Montserrat', serif;
+        .trav-content {
+        font-family: 'Playfair Display', serif;
         font-size: 1.5rem;
         margin: 0;
         font-weight: 100;
@@ -786,13 +787,24 @@
         .cd-divider { font-size: 1.2rem; padding-bottom: 15px; }
 
         /* Zweiter Bereich (Beiger Text) */
-        .split-section { height: 30vh; padding: 80px 25px; }
+        .split-section { height: 35vh; padding: 80px 20px; }
         .split-text { font-size: 1.6rem; line-height: 1.5; }
 
         /* Anmeldung / Formular */
         .registration-section { padding: 60px 20px; height: auto; }
-        .reg-intro { font-size: 1.1rem; margin-bottom: 40px; hyphens: none; text-align: justify;}
-        .reg-title { font-size: 3rem; margin-top: 0; line-height: 1.2; margin-bottom: 30px; }
+        .reg-intro { 
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.4; 
+            hyphens: none; 
+            text-align: justify;
+        }
+        .reg-title { 
+            font-size: 2.8rem; 
+            margin-top: 0; 
+            line-height: 1.2; 
+            margin-bottom: 30px; 
+        }
         .form-row { flex-direction: column; gap: 20px; }
         .rsvp-form { width: 100%; max-width: 100%; }
         .form-group label { font-size: 0.8rem; }
@@ -825,7 +837,7 @@
         }
         .details-text h2 { font-size: 3rem; margin-bottom: 10px; }
         .h3 { font-size: 2.8rem; margin-top: 0; margin-bottom: 30px; }
-        .absatz h4 { font-size: 1.4rem; }
+        .absatz h4 { font-size: 1.2rem; }
         .absatz p { font-size: 1.1rem; }
 
         /* Unterkunft Sektion */
@@ -836,7 +848,7 @@
             display: block !important; 
         }
         .acc-left { 
-            padding: 60px 20px 10px 20px !important;
+            padding: 60px 20px 20px 20px !important;
             width: 100% !important;
             min-width: 0 !important;
             box-sizing: border-box !important;
@@ -854,17 +866,17 @@
 
         /* Anreise Sektion */
         .travel-section {
-            padding: 40px 15px !important; 
+            padding: 60px 20px !important; 
             min-height: auto !important; 
             width: 100% !important;
             box-sizing: border-box !important; 
             display: block !important;
         }
-        .trav-intro { 
+        .trav-content { 
             font-size: 1.1rem !important; 
-            margin-bottom: 30px !important;
+            line-height: 1.4 !important;
             hyphens: none !important;
-            line-height: 1.4;
+            text-align: center !important;
         }
         .trav-title { 
             font-size: 2.8rem; 
@@ -880,7 +892,7 @@
             display: block !important; 
         }
         .faq-left { 
-            padding: 60px 20px 10px 20px !important;
+            padding: 60px 20px 20px 20px !important;
             width: 100% !important;
             min-width: 0 !important;
             box-sizing: border-box !important;
@@ -893,20 +905,32 @@
             min-width: 0 !important; 
             box-sizing: border-box !important; 
         }
-        .faq-content h4 { font-size: 1.2rem; }
-        .faq-content p { font-size: 1.1rem; hyphens: none; }
+        .faq-content h4 { 
+            font-size: 1.2rem !important;
+            line-height: 1.4;
+            hyphens: none !important;
+            text-align: justify;
+        }
+        .faq-content p { 
+            font-size: 1.1rem !important; 
+            line-height: 1.4;
+            hyphens: none !important;
+            text-align: justify;
+        }
 
         /* Footer */
         .site-footer {
-            order: 9 !important; 
-            padding: 40px 15px !important;
+            order: 10 !important; 
+            padding: 60px 20px !important;
             width: 100% !important;
             box-sizing: border-box !important;
-            height: 40vh !important;
+            height: auto !important;
         }
         .footer-content p {
-            font-size: 1rem !important;
+            font-size: 1.1rem !important;
             line-height: 1.4;
+            hyphens: none !important;
+            text-align: justify;
         }
     }
 
