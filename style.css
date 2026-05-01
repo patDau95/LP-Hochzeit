@@ -744,18 +744,18 @@
         }
         
         .registration-section { 
-            order: 4; 
+            order: 9; 
             /* Fix gegen das Abschneiden des Randes */
             width: 100% !important;
             box-sizing: border-box;
         }
 
         /* 4. Den Rest danach einreihen */
-        .details-section { order: 5; }
-        .accommodation-section { order: 6; }
-        .image-section-simple2 { order: 7; }
-        .travel-section { order: 8; }
-        .faq-section { order: 9; }
+        .details-section { order: 4; }
+        .accommodation-section { order: 5; }
+        .image-section-simple2 { order: 6; }
+        .travel-section { order: 7; }
+        .faq-section { order: 8; }
         
         /* Wichtiger Fix für das Bild selbst */
         .image-section-simple1 img {
