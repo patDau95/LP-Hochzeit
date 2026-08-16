@@ -287,7 +287,7 @@
         }
     /* #endregion */
 
-    /* #region VIERTER & SIEBTER BEREICH (Oliven / Grottammare Bild) */
+    /* #region VIERTER, SIEBTER, Neunter BEREICH (Oliven / Grottammare Bild) */
         .image-section-simple1 {
         width: 100%;
         background-color: #dfd9c9; /* Falls das Bild lädt oder Ränder entstehen */
@@ -306,7 +306,7 @@
 
         .image-section-simple2 img {
         width: 100%;     /* Bild nutzt die komplette Breite */
-        height: auto;    /* Höhe passt sich automatisch an, kein Zoom/Schnitt */
+        height: auto;    /* Höhe automatsich */
         display: block;  /* Verhindert einen kleinen weißen Spalt unter dem Bild */
       }
     /* #endregion */
@@ -316,7 +316,7 @@
           display: flex;
           flex-wrap: nowrap; /* Ermöglicht Umbruch bei kleinen Bildschirmen */
           width: 100%;
-          height: 100vh;
+          height: 120vh;
           background-color: #dfd9c9;
         }
 
