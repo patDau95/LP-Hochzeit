@@ -287,7 +287,7 @@
         }
     /* #endregion */
 
-    /* #region VIERTER, SIEBTER, Neunter BEREICH (Oliven / Grottammare Bild) */
+    /* #region VIERTER, SIEBTER, NEUNTER BEREICH (Oliven / Grottammare Bild) */
         .image-section-simple1 {
         width: 100%;
         background-color: #dfd9c9; /* Falls das Bild lädt oder Ränder entstehen */
@@ -309,6 +309,18 @@
         height: auto;    /* Höhe automatsich */
         display: block;  /* Verhindert einen kleinen weißen Spalt unter dem Bild */
       }
+
+        .image-section-simple3 {
+        width: 100%;
+        background-color: #dfd9c9; /* Falls das Bild lädt oder Ränder entstehen */
+      }
+
+        .image-section-simple3 img {
+        width: 100%;     /* Bild nutzt die komplette Breite */
+        height: auto;    /* Höhe automatsich */
+        display: block;  /* Verhindert einen kleinen weißen Spalt unter dem Bild */
+      }
+
     /* #endregion */
       
     /* #region FÜNFTER BEREICH (Details) */
@@ -528,7 +540,89 @@
 
     /* #endregion */
 
-    /* #region NEUNTER BEREICH (FAQ) */
+    /* #region ZEHNTER BEREICH (Empfehlungen) */
+        .details2-section {
+          display: flex;
+          flex-wrap: nowrap; /* Ermöglicht Umbruch bei kleinen Bildschirmen */
+          width: 100%;
+          height: 120vh;
+          background-color: #dfd9c9;
+        }
+
+        /* Linke Seite Sektion 4 */
+        .details2-image {
+          flex: 1;
+          width: 50%;
+          overflow: hidden;
+          min-width: 500px; /* Mindestbreite für kleine Bildschirme */
+        }
+
+        .details2-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        /* Rechte Seite Sektion 4 */
+        .details2-text {
+          flex: 1;
+          width: 50%;
+          min-width: 500px;
+          padding: 60px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: #dfd9c9;
+          text-align: center;
+          box-sizing: border-box;
+        }
+        
+        .details2-text h2 {
+          font-family: 'Ballet', serif;
+          font-size: 4.5rem;
+          margin: 0 0 20px 0;
+          color: #482117;
+          font-weight: 200;
+          line-height: 1.5;
+          margin-left: 0px;
+        }
+
+        .h3 {
+          font-family: 'Belleza', serif;
+          font-size: 5rem;
+          text-transform: uppercase;
+          color: #482117;
+          font-weight: 100;
+          display: block;
+          line-height: 1;
+          margin-top: -15px;
+          margin-left: 0px;
+        }
+
+        .absatz {
+          margin-bottom: 30px;
+        }
+
+        .absatz h4 {
+          font-family: 'Playfair Display', serif;
+          font-size: 1.7rem;
+          letter-spacing: 1px;
+          margin-bottom: 10px;
+          color: #482117;
+        }
+
+        .absatz p {
+          font-family: 'Playfair Display', serif;
+          font-size: 1.5rem;
+          line-height: 1.6;
+          color: #482117;
+          margin: 0;
+        }
+    /* #endregion */
+
+    /* #region ELFTER BEREICH (FAQ) */
         .faq-section {
         display: flex;
         flex-wrap: wrap;
@@ -740,22 +834,25 @@
         
         /* 3. Das Olivenbild VOR die Anmeldung schieben */
         .image-section-simple1 { 
-            order: 3; 
-        }
-        
-        .registration-section { 
-            order: 9; 
-            /* Fix gegen das Abschneiden des Randes */
-            width: 100% !important;
-            box-sizing: border-box;
+            order: 4; 
         }
 
+        /*
+        .registration-section { 
+            order: 9; 
+            // Fix gegen das Abschneiden des Randes
+            width: 100% !important;
+            box-sizing: border-box;
+        }*/
+        
         /* 4. Den Rest danach einreihen */
-        .details-section { order: 4; }
-        .accommodation-section { order: 5; }
-        .image-section-simple2 { order: 6; }
-        .travel-section { order: 7; }
-        .faq-section { order: 8; }
+        .details-section { order: 3; }
+        .accommodation-section { order: 8; }
+        .image-section-simple3 { order: 7; }
+        .image-section-simple2 { order: 9; }
+        .travel-section { order: 10; }
+        .faq-section { order: 5; }
+        .details2-section { order: 6; }
         
         /* Wichtiger Fix für das Bild selbst */
         .image-section-simple1 img {
@@ -765,6 +862,12 @@
         }
 
         .image-section-simple2 img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .image-section-simple3 img {
             width: 100%;
             height: 400px;
             object-fit: cover;
