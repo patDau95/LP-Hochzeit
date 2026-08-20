@@ -943,6 +943,33 @@
         .absatz h4 { font-size: 1.2rem; }
         .absatz p { font-size: 1.1rem; }
 
+        /* Details2 Sektion (Bild & Text Mix) */
+        .details2-section {
+            height: auto; 
+            flex-direction: column; 
+            width: 100% !important;
+            overflow: hidden;
+        }
+        .details2-image { 
+            height: 400px !important; 
+            order: 1; 
+            width: 100% !important;
+            min-width: 0 !important;
+        } /* Bild oben */
+        .details2-image img { 
+            height: 100%; 
+            width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .details2-text { 
+            order: 2;
+            padding: 50px 20px; 
+            width: 100%; 
+            min-width: 0 !important; 
+        }
+        .details2-text h2 { font-size: 3rem; margin-bottom: 10px; }
+
         /* Unterkunft Sektion */
         .accommodation-section { 
             height: auto !important; 
